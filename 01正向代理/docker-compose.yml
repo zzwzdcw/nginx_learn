@@ -1,0 +1,27 @@
+version: '3'
+services:
+  web:
+    container_name: web
+    build:
+      context: /web
+      dockerfile: Dockerfile
+    depends_on:
+      - agency
+    restart: always
+    networks:
+      - test
+    expose:
+      - "80"
+  agency:
+    container_name: agency
+    build:
+      context: /agency
+      dockerfile: Dockerfile
+    ports:
+      - "9010:80" #对外暴露9010端口
+    restart: always
+    networks:
+      - test
+networks:
+  test:
+    driver: bridge 

@@ -1,0 +1,10 @@
+#这个是web服务器
+FROM nginxbase
+LABEL AUTHOR="tanjiji" \
+      email="2749978755@qq.com" \
+      version="v1.0"
+COPY nginx.conf /etc/nginx/
+COPY web /www/wwwroot/web
+WORKDIR /www/wwwroot/web
+CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 80
