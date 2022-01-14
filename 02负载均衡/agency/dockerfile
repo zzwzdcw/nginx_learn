@@ -1,0 +1,8 @@
+FROM nginxbase
+LABEL AUTHOR="tanjiji" \
+      email="2749978755@qq.com" \
+      version="v1.0"
+COPY nginx.conf /etc/nginx/
+WORKDIR /etc
+CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 80
