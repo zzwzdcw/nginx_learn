@@ -5,6 +5,7 @@ LABEL author="tanjiji" \
       version="v1.0"
 RUN apk update \
     && apk add nginx \
-    && apk add curl
+    && apk add curl \
+    && apk add vim
 CMD ["nginx", "-g", "daemon off;"]
 EXPOSE 80
