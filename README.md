@@ -74,3 +74,5 @@ http块是Nginx服务器配置中配置最频繁的部分，包括HTTP 全局块
 
 
 ### devtest
+
+### devtest2
