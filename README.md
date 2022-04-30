@@ -71,3 +71,6 @@ events 块涉及Nginx服务器与用户的网络连接,这一部分对Nginx服�
 ### HTTP 块
 
 http块是Nginx服务器配置中配置最频繁的部分，包括HTTP 全局块 和 server 块
+
+
+### devtest
